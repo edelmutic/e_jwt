@@ -11,6 +11,10 @@ app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
 
+app.get('/test', (req, res) => {
+  res.send('Hello from test');
+});
+
 const start = async () => {
   try {
     await mongoose.connect(process.env.DB_URL, {
