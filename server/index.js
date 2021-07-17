@@ -18,6 +18,7 @@ app.use(
 );
 app.use(cookieParser());
 app.use('/api', router);
+app.use(errorMiddleware);
 
 app.get('/test', (req, res) => {
   res.send('Hello from test');
